@@ -1,0 +1,16 @@
+data_path: "data/raw/housing.csv"
+random_state: 42
+model:
+  type: "LinearRegression"
+split:
+  test_size: 0.2
+  random_state: 42
+  target_col: "price"   # replace with actual target column name
+preprocessing:
+  scale: true
+  encode_categorical: true
+model:
+  type: "RandomForest"
+  test_size: 0.2
+  random_state: 42
+  save_model_dir: "models"

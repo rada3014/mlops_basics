@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/U422315/OneDrive%20-%20United%20Airlines/Documents/Projects/Self%20Learning/mlops_basics/mlruns/333427641202632228/741c0b5b0ca442aab274ab6e7b52a521/artifacts
+end_time: 1761734225681
+entry_point_name: ''
+experiment_id: '333427641202632228'
+lifecycle_stage: active
+run_id: 741c0b5b0ca442aab274ab6e7b52a521
+run_name: LinearRegression_run
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761734225596
+status: 3
+tags: []
+user_id: u422315
