@@ -4,12 +4,14 @@ import argparse
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from joblib import dump
 
 def read_params(config_path):
     """Read parameters from YAML config."""
     with open(config_path, "r") as f:
         config = yaml.safe_load(f)
     return config
+
 
 def preprocess_data(config_path):
     """Preprocess data for housing dataset."""
@@ -54,6 +56,11 @@ def preprocess_data(config_path):
     X_test.to_csv("data/test/X_test.csv", index=False)
     y_train.to_csv("data/train/y_train.csv", index=False)
     y_test.to_csv("data/test/y_test.csv", index=False)
+
+    # --- Save scaler and encoded column structure ---
+    dump(scaler, "models/scaler.joblib")
+    dump(X.columns.tolist(), "models/feature_names.joblib")
+
 
     print("✅ Data Preprocessing Complete!")
     print(f"Train shape: {X_train.shape}, Test shape: {X_test.shape}")
