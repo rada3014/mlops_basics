@@ -1,0 +1,26 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore Git, DVC, and MLflow stuff
+.git/
+.gitignore
+.dvc/
+.mlflow/
+mlruns/
+
+# Ignore data files (we don’t need raw data in container)
+data/
+datasets/
+logs/
+
+# Ignore notebooks and local configs
+*.ipynb
+*.log
+.DS_Store
